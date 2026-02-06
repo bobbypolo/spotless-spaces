@@ -188,6 +188,15 @@ ul { list-style: none; }
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--color-brown-dark);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.navbar__logo-img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .navbar__list {
@@ -356,6 +365,19 @@ ul { list-style: none; }
   margin-top: 4px;
 }
 
+.hero__logo {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.hero__logo-img {
+  width: clamp(180px, 22vw, 280px);
+  border-radius: 50%;
+  box-shadow: 0 8px 30px rgba(92, 61, 14, 0.2);
+}
+
 @keyframes badgePulse {
   0%, 100% { transform: scale(1); }
   50%      { transform: scale(1.05); }
@@ -519,6 +541,15 @@ ul { list-style: none; }
 .gallery__item img {
   width: 100%;
   object-fit: cover;
+}
+
+.gallery__item figcaption {
+  text-align: center;
+  padding: 0.8rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-brown-dark);
+  background: var(--color-cream-light);
 }
 
 /* ---------- Testimonials ---------- */
