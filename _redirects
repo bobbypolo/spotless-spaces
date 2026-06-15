@@ -1,2 +1,0 @@
-# Canonical host: 301-redirect www -> apex (spotless-spaces.vip)
-https://www.spotless-spaces.vip/* https://spotless-spaces.vip/:splat 301
