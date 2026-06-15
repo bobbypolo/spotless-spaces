@@ -1,0 +1,24 @@
+{
+  "name": "Spotless Spaces",
+  "short_name": "Spotless Spaces",
+  "description": "Professional house & commercial cleaning in Lake County by Ava & Samantha.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0f4c5c",
+  "icons": [
+    {
+      "src": "/images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
