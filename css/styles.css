@@ -219,6 +219,17 @@ ul {
   height: 44px;
   border-radius: 50%;
   object-fit: cover;
+  animation: logo-bob 4s ease-in-out infinite;
+  will-change: transform;
+}
+@keyframes logo-bob {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 
 .navbar__list {
@@ -960,7 +971,8 @@ ul {
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
-  .hero__logo-img {
+  .hero__logo-img,
+  .navbar__logo-img {
     animation: none;
   }
   .hero__logo:hover .hero__logo-img,
