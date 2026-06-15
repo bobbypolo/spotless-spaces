@@ -1,0 +1,20 @@
+# Cache policy — applies on Netlify and Cloudflare Pages
+# (both read this file from the publish root)
+
+# HTML: never trust the cache — always revalidate so a new deploy
+# shows up immediately for returning visitors.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# CSS / JS: cached long, but the URLs are versioned with ?v=...
+# Bump the ?v= value in index.html whenever these files change.
+/css/*
+  Cache-Control: public, max-age=31536000
+/js/*
+  Cache-Control: public, max-age=31536000
+
+# Images: cache for a week.
+/images/*
+  Cache-Control: public, max-age=604800

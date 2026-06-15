@@ -1,3 +1,56 @@
+# === Project (spotless-spaces) ===
 .DS_Store
 Thumbs.db
 .env
+
+# BEGIN ADE MANAGED -- do not edit this section
+__pycache__/
+*.pyc
+.claude/errors/*.json
+.claude/errors/*.jsonl
+research/
+.claude/settings.local.json
+*.log
+.env
+.DS_Store
+.claude/ralph-state.json
+.claude/ralph-sprint-state.json
+.claude/worktrees/
+.claude/docs/verification-log.md
+.claude/docs/verification-log.jsonl
+.claude/verification-log.jsonl
+verification-log.jsonl
+.claude/docs/progress.md
+.claude/sprints/*/verification-log.jsonl
+.claude/sprints/*/progress.md
+.claude/sprints/*/discovery-receipt.jsonl
+.claude/sprints/*/dogfood-receipts/
+.claude/.bypass-stop-verify
+.claude/.workflow-state.json
+# Single-use Stop-gate bypass flag -- consumed on use; never commit
+.claude/.bypass-stop-verify
+# Prevent nested .claude dirs from accidental CWD-drift hook runs
+.claude/hooks/.claude/
+.mcp.json
+.claude/.file-manifest.json
+.claude/runtime/
+.coverage*
+!.coveragerc
+# END ADE MANAGED
+
+# Project-specific patterns below this line
+.claude/.workflow-state.json.lock
+.claude/scheduled_tasks.lock
+.claude/docs/PLAN_authority_state.md
+.claude/docs/knowledge/lessons.md
+.claude/docs/brainstorms/*.md
+.claude/receipts/
+.hypothesis/
+failed_tests.txt
+test_out.txt
+%SystemDrive%/
+
+# Design-system provenance log -- append-only session record of Stitch/21st/Figma variant
+# origins. Excluded because each contributor's exploration history differs and the log is
+# re-generated each session. tokens.json, components.json, and COMPONENTS.md ARE committed.
+.claude/design-system/provenance.jsonl
