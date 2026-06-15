@@ -10,7 +10,7 @@
   --color-primary: #1b7e94; /* primary blue-teal — buttons, links, accents */
   --color-accent: #3fa483; /* fresh green accent — borders, underlines (on light) */
   --color-accent-light: #7fe3c0; /* bright mint — accents on dark sections */
-  --color-green: #2e9e6b; /* secondary green — taglines */
+  --color-green: #157f50; /* deep green — taglines (WCAG AA on white) */
   --color-surface: #eaf7f3; /* light mint — soft surfaces & light text on dark */
   --color-surface-alt: #f2fafb; /* very light blue tint — alternating sections */
   --color-white: #ffffff;
@@ -423,6 +423,12 @@ ul {
   transform: perspective(900px) rotateY(-8deg) rotateX(5deg) scale(1.03);
 }
 
+/* <picture> wrappers stay layout-transparent so the logo <img> renders unchanged */
+.navbar__logo picture,
+.hero__logo picture {
+  display: contents;
+}
+
 @keyframes float {
   0%,
   100% {
@@ -678,7 +684,7 @@ ul {
   padding: 0.8rem 0;
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--color-primary);
+  color: #136677; /* darkened teal — WCAG AA on the mint phone card */
   border-bottom: 1px solid rgba(63, 164, 131, 0.3);
   transition: color var(--transition);
 }
@@ -746,6 +752,11 @@ ul {
   outline-offset: 2px;
   border-color: var(--color-primary);
   box-shadow: 0 0 0 3px rgba(27, 126, 148, 0.28);
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #5a6b6f; /* readable hint text — WCAG AA (5.6:1) on white inputs */
+  opacity: 1; /* Firefox dims placeholders by default; keep contrast intact */
 }
 
 .form-row {

@@ -89,13 +89,19 @@
     <header id="navbar" class="navbar">
       <div class="container navbar__inner">
         <a href="#hero" class="navbar__logo">
-          <img
-            src="images/logo-spotless-spaces.jpg"
-            alt="Spotless Spaces logo"
-            class="navbar__logo-img"
-            width="44"
-            height="44"
-          />
+          <picture>
+            <source
+              srcset="images/logo-spotless-spaces.webp"
+              type="image/webp"
+            />
+            <img
+              src="images/logo-spotless-spaces.jpg"
+              alt="Spotless Spaces logo"
+              class="navbar__logo-img"
+              width="44"
+              height="44"
+            />
+          </picture>
           Spotless Spaces
         </a>
         <button
@@ -150,11 +156,17 @@
             </div>
           </div>
           <div class="hero__logo">
-            <img
-              src="images/logo-spotless-spaces.jpg"
-              alt="Ava and Samantha — Spotless Spaces logo"
-              class="hero__logo-img"
-            />
+            <picture>
+              <source
+                srcset="images/logo-spotless-spaces.webp"
+                type="image/webp"
+              />
+              <img
+                src="images/logo-spotless-spaces.jpg"
+                alt="Ava and Samantha — Spotless Spaces logo"
+                class="hero__logo-img"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -473,6 +485,7 @@
                   id="name"
                   name="name"
                   required
+                  autocomplete="name"
                   placeholder="Your full name"
                 />
               </div>
@@ -483,6 +496,7 @@
                   id="email"
                   name="email"
                   required
+                  autocomplete="email"
                   placeholder="you@email.com"
                 />
               </div>
@@ -493,6 +507,7 @@
                     type="tel"
                     id="phone"
                     name="phone"
+                    autocomplete="tel"
                     placeholder="(555) 123-4567"
                   />
                 </div>
